@@ -1,0 +1,240 @@
+/* assignment 2 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --backColor: #ff5722;
+  --textColor: white;
+}
+
+.as1 {
+  width: 150px;
+  margin: 100px auto;
+  background-color: var(--backColor);
+  color: var(--textColor);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 40px;
+  position: relative;
+}
+
+.as1::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 30px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(1.3);
+  right: -55px;
+}
+.as1::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 30px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(1.3);
+  left: 15px;
+}
+
+body::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 18px solid white;
+  position: absolute;
+  top: 163px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 2;
+}
+
+body::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-top: 18px solid #ffffff;
+  position: absolute;
+  top: 125px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 2;
+}
+
+/* assignment 2 */
+
+.as2 {
+  width: 150px;
+  padding: 20px 20px 20px 41px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #009688;
+  position: relative;
+  font-size: 31px;
+  color: white;
+}
+
+.as2::before {
+  content: "";
+  width: 14%;
+  height: 100%;
+  background-color: #009688;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  transform: translate(-54%, 0) skew(20deg);
+  border-right: 8px solid white;
+}
+
+/* assignment 4 */
+
+.as4 {
+  width: 200px;
+  height: 200px;
+  margin: 150px auto;
+  background-color: #607d8b;
+  border-bottom: 5px solid black;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.as4::before {
+  content: "";
+  width: 70.5%;
+  height: 70.5%;
+  background-color: black;
+  position: absolute;
+  transform: translate(0, -50%) rotate(45deg);
+  right: 27px;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+}
+
+.as4::after {
+  content: "Elzero";
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  color: white;
+  font-size: 15px;
+}
+
+/* assignment 5 */
+
+.as5 {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  perspective: 600px;
+}
+
+.as5:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.as5::after {
+  content: "Fornt";
+  background-color: #fa3664;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.as5::before {
+  content: "Back";
+  background-color: #1692fc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* part 2 */
+
+.as5-1 {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  transform-style: preserve-3d;
+  transform-origin: center bottom;
+  transition: transform 1s;
+  perspective: 600px;
+}
+
+.as5-1:hover {
+  transform: translateY(-100%) rotateX(-180deg);
+}
+
+.as5-1::after {
+  content: "Fornt";
+  background-color: #fa3664;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.as5-1::before {
+  content: "Back";
+  background-color: #1692fc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+}
